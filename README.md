@@ -8,6 +8,7 @@
  - AndroidX
  - LiveData
  - Call Cache
+ - Support for landscape and potrait mode
 
  Search images via api for images from pixbay.com
 
