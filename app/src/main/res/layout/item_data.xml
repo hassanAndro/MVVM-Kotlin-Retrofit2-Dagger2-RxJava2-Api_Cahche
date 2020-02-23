@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.example.paybacktask.model.Data" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/data_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_4sdp"
+        android:elevation="@dimen/_4sdp"
+        app:cardCornerRadius="@dimen/_4sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/_5sdp">
+
+            <TextView
+                android:id="@+id/data_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="@{data.user, default=Name}"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/data_thumbnail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_140sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:scaleType="center"
+                android:src="@{data.webformatURL , default=@drawable/default_image}" />
+
+
+            <TextView
+                android:id="@+id/data_tags"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:maxLines="1"
+                android:text="@{data.tags, default=Tags}"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">PAYBACK TASK</string>
+    <string name="fetching_data">Fetching Results</string>
+    <string name="no_fetching_data">No Results Found</string>
+    <string name="error_fetching_data">Error Fetching Results</string>
+    <string name="search_hint">Type your keyword here</string>
+    <string name="more_details">Do you want to see more details?</string>
+    <string name="details">Show</string>
+    <string name="cancel">Cancel</string>
+</resources>
