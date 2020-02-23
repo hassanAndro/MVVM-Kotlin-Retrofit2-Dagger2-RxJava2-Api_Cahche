@@ -11,7 +11,7 @@
 
  Search images via api for images from pixbay.com
 
-#Flow :
+ Flow :
 
 SplashScreen -> MainActivity (Search and item clickable) -> onitemClick AlertDialog -> Show -> DetailsScreen (Large Image, Name, tags, likes, favorites, Comments)
 
