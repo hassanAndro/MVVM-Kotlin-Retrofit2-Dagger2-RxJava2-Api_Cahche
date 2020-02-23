@@ -1,4 +1,4 @@
-# Android App using the Pixbay API to Search Images
+# Android App using the Pixbay API with Architecture components, Retrofit 2, RxJava 2 and Dagger 2
 
  - MVVM
  - Databinding

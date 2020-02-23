@@ -1,6 +1,6 @@
 package com.example.paybacktask.di
 
-import android.app.Application
+
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkInfo
@@ -14,21 +14,18 @@ import dagger.Module
 import dagger.Provides
 import io.reactivex.disposables.CompositeDisposable
 import okhttp3.Cache
-import okhttp3.CacheControl
 import okhttp3.Interceptor
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.moshi.MoshiConverterFactory
 import okhttp3.OkHttpClient
-import okhttp3.logging.HttpLoggingInterceptor
 import java.io.File
-import java.util.concurrent.TimeUnit
 
 
 @Module
 class ApiModule {
 
-    val context: Context = MyApplication.applicationContext()
+    private val context: Context = MyApplication.applicationContext()
 
     @Provides
     fun provideSearchResultApi(): SearchApi {
