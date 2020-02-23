@@ -13,5 +13,5 @@
 
  Flow : 
  SplashScreen -> MainActivity (Search and item clickable) -> onitemClick AlertDialog -> Show -> DetailsScreen (Large Image, Name, tags, likes, favorites, Comments)
-                                                          -> Search (Load new items according to search in recyclerview)
 
+--> Search (Load new items according to search in recyclerview)
