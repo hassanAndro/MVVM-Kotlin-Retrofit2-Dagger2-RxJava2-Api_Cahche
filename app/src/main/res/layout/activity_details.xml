@@ -40,151 +40,165 @@
 
         </RelativeLayout>
 
-        <RelativeLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_4sdp">
-
-            <ImageView
-                android:id="@+id/data_main_image"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_250sdp"
-                android:layout_gravity="center"
-                android:src="@{data.largeImageURL , default=@drawable/default_image}" />
-
-        </RelativeLayout>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/data_card_view"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_4sdp"
-            android:elevation="@dimen/_4sdp"
-            app:cardCornerRadius="@dimen/_4sdp">
+            android:layout_height="match_parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="@dimen/_5sdp">
+                android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/data_user_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_4sdp"
-                    android:maxLines="1"
-                    android:text="@{data.user, default=Name}"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="@dimen/_17sdp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/data_detail_tags"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_4sdp"
-                    android:maxLines="1"
-                    android:text="@{data.tags, default=Tags}"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="@dimen/_15sdp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
-
-                <LinearLayout
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_30sdp"
-                    android:orientation="horizontal"
-                    android:weightSum="3">
+                    android:layout_margin="@dimen/_4sdp">
 
-                    //likes
+                    <ImageView
+                        android:id="@+id/data_main_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_250sdp"
+                        android:layout_gravity="center"
+                        android:src="@{data.largeImageURL , default=@drawable/default_image}" />
+
+                </RelativeLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/data_card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_4sdp"
+                    android:elevation="@dimen/_4sdp"
+                    app:cardCornerRadius="@dimen/_4sdp">
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="@dimen/_23sdp"
-                            android:layout_height="@dimen/_23sdp"
-                            android:src="@drawable/like" />
+                        android:orientation="vertical"
+                        android:padding="@dimen/_5sdp">
 
                         <TextView
-                            android:id="@+id/data_likes"
+                            android:id="@+id/data_user_name"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginLeft="@dimen/_5sdp"
-                            android:text="@{String.valueOf(data.likes), default=0}"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:maxLines="1"
+                            android:text="@{data.user, default=Name}"
                             android:textColor="@color/colorPrimary"
-                            android:textSize="@dimen/_17sdp" />
-
-                    </LinearLayout>
-
-                    //Favorites
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="@dimen/_23sdp"
-                            android:layout_height="@dimen/_23sdp"
-                            android:src="@drawable/star" />
+                            android:textSize="@dimen/_17sdp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
 
                         <TextView
-                            android:id="@+id/data_favorites"
+                            android:id="@+id/data_detail_tags"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginLeft="@dimen/_5sdp"
-                            android:text="@{String.valueOf(data.favorites), default=0}"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:maxLines="1"
+                            android:text="@{data.tags, default=Tags}"
                             android:textColor="@color/colorPrimary"
-                            android:textSize="@dimen/_17sdp" />
+                            android:textSize="@dimen/_15sdp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
 
-                    </LinearLayout>
-
-                    //comments
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="@dimen/_23sdp"
-                            android:layout_height="@dimen/_23sdp"
-                            android:src="@drawable/comment" />
-
-                        <TextView
-                            android:id="@+id/data_comments"
-                            android:layout_width="wrap_content"
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginLeft="@dimen/_5sdp"
-                            android:text="@{String.valueOf(data.comments), default=0}"
-                            android:textColor="@color/colorPrimary"
-                            android:textSize="@dimen/_17sdp" />
+                            android:layout_marginTop="@dimen/_30sdp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            //likes
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_23sdp"
+                                    android:layout_height="@dimen/_23sdp"
+                                    android:src="@drawable/like" />
+
+                                <TextView
+                                    android:id="@+id/data_likes"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="@dimen/_5sdp"
+                                    android:text="@{String.valueOf(data.likes), default=0}"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="@dimen/_17sdp" />
+
+                            </LinearLayout>
+
+                            //Favorites
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_23sdp"
+                                    android:layout_height="@dimen/_23sdp"
+                                    android:src="@drawable/star" />
+
+                                <TextView
+                                    android:id="@+id/data_favorites"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="@dimen/_5sdp"
+                                    android:text="@{String.valueOf(data.favorites), default=0}"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="@dimen/_17sdp" />
+
+                            </LinearLayout>
+
+                            //comments
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_23sdp"
+                                    android:layout_height="@dimen/_23sdp"
+                                    android:src="@drawable/comment" />
+
+                                <TextView
+                                    android:id="@+id/data_comments"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="@dimen/_5sdp"
+                                    android:text="@{String.valueOf(data.comments), default=0}"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="@dimen/_17sdp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
 
                     </LinearLayout>
-
-                </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
+
+        </ScrollView>
+
     </LinearLayout>
 </layout>
