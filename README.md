@@ -11,7 +11,8 @@
 
  Search images via api for images from pixbay.com
 
- Flow : 
- SplashScreen -> MainActivity (Search and item clickable) -> onitemClick AlertDialog -> Show -> DetailsScreen (Large Image, Name, tags, likes, favorites, Comments)
+#Flow :
+
+SplashScreen -> MainActivity (Search and item clickable) -> onitemClick AlertDialog -> Show -> DetailsScreen (Large Image, Name, tags, likes, favorites, Comments)
 
 --> Search (Load new items according to search in recyclerview)
