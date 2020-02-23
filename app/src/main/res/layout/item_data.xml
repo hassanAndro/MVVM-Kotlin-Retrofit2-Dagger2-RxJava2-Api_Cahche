@@ -40,7 +40,7 @@
             <ImageView
                 android:id="@+id/data_thumbnail"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_140sdp"
+                android:layout_height="@dimen/_200sdp"
                 android:layout_gravity="center"
                 android:layout_marginTop="@dimen/_4sdp"
                 android:scaleType="center"
